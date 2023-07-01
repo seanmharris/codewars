@@ -17,7 +17,7 @@ function firstNonRepeated(s) {
     return null
   }
 
-/* count object / Map method
+/* Alternate count object / Map method
 function firstNonRepeated(s) {
     let counts = {}
     for (let char of s) {
