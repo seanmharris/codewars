@@ -22,3 +22,11 @@ function determineTime (durations) {
   totalM %= 60
   return totalH < 24 || totalH == 24 && totalM == 0 && totalS == 0
 }
+
+// Realizing now that all we need to know is seconds in a 24 hour period. 
+// Rather than converting everything up & modding down, we should convert all values to seconds & check that the total is <= 86400
+
+function determineTime(times) {
+    return times.map(time => time.split(':'))
+                .reduce((a, [h,m,s]) => a  + (+h * 3600) + (+m * 60) + +s, 0) <= 86400
+}
