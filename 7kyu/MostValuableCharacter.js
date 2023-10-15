@@ -12,6 +12,6 @@ solve("axyzxyz") = 'x'
 function solve(st) {
     let uniques = Array.from(new Set([...st])),
         scores = uniques.map(char => st.lastIndexOf(char) - st.indexOf(char)),
-        top = Math.max(...scores),
+        top = Math.max(...scores);
     return uniques.map((x,i) => [x,scores[i]]).filter(([_, score]) => score === top).sort((a,b) => a[0].localeCompare(b[0]))[0][0]
   }
