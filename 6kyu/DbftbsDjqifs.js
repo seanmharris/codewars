@@ -23,4 +23,5 @@ function encryptor (key, message) {
       res += alpha[idx].toUpperCase()
     } else res += char
   }
-  return res
+  return res;
+}
